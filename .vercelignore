@@ -1,0 +1,10 @@
+.git
+.next
+node_modules
+smartcompliance.db
+pytest-cache-files-*
+legacy-backend/__pycache__
+legacy-backend/tests/__pycache__
+legacy-backend/app/__pycache__
+legacy-backend/app/services/__pycache__
+*.pyc
