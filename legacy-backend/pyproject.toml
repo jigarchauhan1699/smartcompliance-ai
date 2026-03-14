@@ -1,0 +1,26 @@
+[project]
+name = "smartcompliance-ai"
+version = "0.1.0"
+description = "MVP foundation for an AML/KYC intelligence platform."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "email-validator>=2.2.0",
+    "fastapi>=0.116.0",
+    "pydantic-settings>=2.10.0",
+    "sqlalchemy>=2.0.41",
+    "uvicorn>=0.35.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "httpx>=0.28.1",
+    "pytest>=8.4.1",
+]
+
+[build-system]
+requires = ["setuptools>=80.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

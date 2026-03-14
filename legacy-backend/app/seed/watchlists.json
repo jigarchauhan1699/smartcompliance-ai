@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Ivan Petrov",
+    "category": "sanctions",
+    "source": "OFAC",
+    "aliases": [
+      "ivan petrov"
+    ]
+  },
+  {
+    "name": "Fatima Rahman",
+    "category": "pep",
+    "source": "Global PEP Registry",
+    "aliases": [
+      "fatima rahman"
+    ]
+  },
+  {
+    "name": "Omar Haddad",
+    "category": "sanctions",
+    "source": "EU Consolidated List",
+    "aliases": [
+      "omar haddad"
+    ]
+  }
+]

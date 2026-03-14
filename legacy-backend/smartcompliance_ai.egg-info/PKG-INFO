@@ -1,0 +1,60 @@
+Metadata-Version: 2.4
+Name: smartcompliance-ai
+Version: 0.1.0
+Summary: MVP foundation for an AML/KYC intelligence platform.
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: email-validator>=2.2.0
+Requires-Dist: fastapi>=0.116.0
+Requires-Dist: pydantic-settings>=2.10.0
+Requires-Dist: sqlalchemy>=2.0.41
+Requires-Dist: uvicorn>=0.35.0
+Provides-Extra: dev
+Requires-Dist: httpx>=0.28.1; extra == "dev"
+Requires-Dist: pytest>=8.4.1; extra == "dev"
+
+﻿# SmartCompliance AI
+
+MVP foundation for the SmartCompliance AI project plan. This repository starts with a backend service that covers:
+
+- customer onboarding records
+- sanctions and PEP screening
+- explainable risk scoring
+- case creation and analyst disposition
+- immutable-style audit event capture
+
+## Tech stack
+
+- Python 3.12+
+- FastAPI
+- SQLAlchemy
+- SQLite for local development
+
+## Local setup
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+pip install -e .[dev]
+uvicorn app.main:app --reload
+```
+
+The service seeds a local watchlist and writes a SQLite database to `smartcompliance.db` in the repo root.
+
+## API overview
+
+- `GET /health`
+- `POST /api/v1/customers`
+- `POST /api/v1/screenings`
+- `GET /api/v1/customers/{customer_id}`
+- `GET /api/v1/cases`
+- `PATCH /api/v1/cases/{case_id}`
+- `GET /api/v1/audit-events`
+
+## MVP workflow
+
+1. Create a customer with onboarding and profile details.
+2. Screen the customer against sanctions and PEP watchlists.
+3. Review the generated risk score and screening matches.
+4. Investigate the generated case and update its disposition.
+5. Inspect the audit trail for every state-changing action.
