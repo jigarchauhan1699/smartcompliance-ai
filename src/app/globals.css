@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
 :root {
+  --font-body: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Trebuchet MS", "Avenir Next", "Segoe UI", sans-serif;
   --bg: #f5f7fa;
   --surface: rgba(255, 255, 255, 0.9);
   --surface-strong: #ffffff;

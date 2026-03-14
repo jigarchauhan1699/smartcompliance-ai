@@ -1,19 +1,8 @@
 import type { Metadata } from "next";
-import { DM_Sans, Space_Grotesk } from "next/font/google";
 
 import { AuthProvider } from "@/components/auth-provider";
 import { WorkspaceProvider } from "@/components/workspace-provider";
 import "./globals.css";
-
-const dmSans = DM_Sans({
-  variable: "--font-body",
-  subsets: ["latin"],
-});
-
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-display",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "SmartCompliance AI",
@@ -27,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${dmSans.variable} ${spaceGrotesk.variable}`}>
+      <body>
         <AuthProvider>
           <WorkspaceProvider>{children}</WorkspaceProvider>
         </AuthProvider>
